@@ -1,0 +1,101 @@
+@font-face {
+    font-family: "Hans Kendrick";
+    src: url(./fonts/HansKendrick-Regular.otf);
+    font-weight: 500;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.1s ease-in;
+}
+
+body {
+    font-family: "Hans Kendrick", sans-serif;
+    font-size: 13px;
+}
+
+.container--1 {
+    max-width: 1170px;
+    margin: 100px auto;
+    display: grid;
+    grid-gap: 40px;
+    grid-template-rows: 1fr 1fr 464px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "big big small-1"
+                         "big big small-2"
+                         "long-1 long-2 long-3";
+}
+
+.container--1 .img {
+    overflow: hidden;
+}
+
+.img--1 {
+    grid-area: big;
+}
+
+.img--2 {
+    grid-area: small-1;
+}
+
+.img--3 {
+    grid-area: small-2;
+}
+
+.container--2 {
+    max-width: 1360px;
+    margin: 100px auto;
+    display: grid;
+    justify-content: center;
+    grid-template-rows: repeat(2, 340px);
+    grid-template-columns: repeat(auto-fit, 340px);
+}
+
+.container--2 .img {
+    background-color: black;
+}
+
+.container--2 img {
+    opacity: .5;
+}
+
+.container--2 img:hover {
+    opacity: 1;
+}
+
+.more {
+    margin: auto;
+    width: fit-content;
+}
+
+.continue-btn {
+    background-color: #ffffff;
+    color: #ffffff;
+    border: 1px solid #777777;
+    padding: 15px 40px;
+    margin-bottom: 50px;
+}
+
+.continue-btn:focus{
+    outline: none;
+}
+
+.continue-btn a {
+    text-decoration: none;
+    color: #777777;
+    text-transform: uppercase;
+}
+
+.continue-btn:hover {
+    background-color: #777777;
+}
+
+.continue-btn:hover > a{
+    color: #ffffff;
+}
+
+.continue-btn:hover > .fas {
+    color: #c9c9c9;
+}
